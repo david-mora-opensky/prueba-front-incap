@@ -304,10 +304,19 @@ body {
 }
 .header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .fail {
   display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .fail img {
   width: 128px;
   height: 128px;
+  margin-right: 10px;
+}
+.header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .fail p {
+  margin-top: 5px;
+}
+.header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .fail h4 {
+  text-align: center;
 }
 .header .custom-nav #navbarNav .cart #buyModal .hide-content {
   /* The Close Button */

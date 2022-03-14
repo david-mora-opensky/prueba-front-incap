@@ -294,10 +294,17 @@ body {
             .fail {
               display: flex;
               align-items: center;
+              flex-direction: column;
               img {
                 width: 128px;
                 height: 128px;
                 margin-right: 10px;
+              }
+              p {
+                margin-top: 5px;
+              }
+              h4 {
+                text-align: center;
               }
             }
           }
