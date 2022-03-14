@@ -253,10 +253,20 @@ body {
 }
 .header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .check img {
   width: 128px;
+  height: 128px;
 }
 .header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .check .right {
   display: flex;
   flex-direction: column;
+}
+.header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .check .right #required-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .check .right #required-checkbox label {
+  margin-left: 5px;
+  font-size: 0.9rem;
 }
 .header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .check .right #pay {
   background-color: #004765;
@@ -265,7 +275,7 @@ body {
   text-decoration: none;
   border-radius: 25px;
   text-align: center;
-  width: 40%;
+  width: 65%;
   cursor: pointer;
 }
 .header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .fail {
@@ -273,6 +283,7 @@ body {
 }
 .header .custom-nav #navbarNav .cart #buyModal .contain-modal2 .fail img {
   width: 128px;
+  height: 128px;
 }
 .header .custom-nav #navbarNav .cart #buyModal .hide-content {
   /* The Close Button */
@@ -485,7 +496,7 @@ body {
   font-size: 30px;
 }
 .main-container-couses-async .grid-container .grid-item .card {
-  width: 75%;
+  width: 400px;
   margin: auto;
 }
 .main-container-couses-async .grid-container .grid-item .card .card-img-top {
@@ -505,6 +516,7 @@ body {
 }
 .main-container-couses-async .grid-container .grid-item .card .buy-container {
   display: flex;
+  justify-content: center;
 }
 .main-container-couses-async .grid-container .grid-item .card .buy-container .buy-course {
   padding: 20px;
@@ -544,16 +556,6 @@ body {
 }
 .main-container-couses-async .grid-container .grid-item .card .buy-container .buy-course.sendtocart .cart-item:before {
   animation: yAxis 1s alternate forwards cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-@keyframes xAxis {
-  100% {
-    transform: translateX(calc(50vw - 105px));
-  }
-}
-@keyframes yAxis {
-  100% {
-    transform: translateY(calc(-50vh + 75px));
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

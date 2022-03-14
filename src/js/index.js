@@ -135,7 +135,7 @@ const addListBuy = (itemBuy) => {
 
 const confirm = (itemBuy) => {
   let suma = 0;
-
+  console.log(`666`, 666);
   const buyModal = document.querySelector(".contain-modal2");
   for (let i = 0; i < itemBuy.length; i++) {
     suma += parseInt(itemBuy[i].price);
@@ -164,6 +164,8 @@ const confirm = (itemBuy) => {
     <div class="right">
       <p>La suma de los cursos es: $${suma}
       <p>No hay cruce de horarios</p>
+      <div id="required-checkbox">
+      <input id="acepptConditions" type="checkbox"><label for="acepptConditions">Aceptar las condiciones de pago</label></div>
       <a id="pay">Paga aquí</a>
     </div>
   </div>
@@ -176,6 +178,9 @@ const confirm = (itemBuy) => {
     <div class="right">
       <p>La suma de los cursos es: $${suma}
       <p>No hay cruce de horarios</p>
+      <div id="required-checkbox">
+      <input id="acepptConditions" type="checkbox"><label for="acepptConditions">Aceptar las condiciones de pago</label>
+      </div>
       <a id="pay">Paga aquí</a>
     </div>
   </div>

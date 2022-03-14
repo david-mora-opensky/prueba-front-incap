@@ -242,10 +242,20 @@ body {
               display: flex;
               img {
                 width: 128px;
+                height: 128px;
               }
               .right {
                 display: flex;
                 flex-direction: column;
+                #required-checkbox {
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 10px;
+                  label {
+                    margin-left: 5px;
+                    font-size: 0.9rem;
+                  }
+                }
                 #pay {
                   background-color: #004765;
                   padding: 5px 15px;
@@ -253,7 +263,7 @@ body {
                   text-decoration: none;
                   border-radius: 25px;
                   text-align: center;
-                  width: 40%;
+                  width: 65%;
                   cursor: pointer;
                 }
               }
@@ -262,6 +272,7 @@ body {
               display: flex;
               img {
                 width: 128px;
+                height: 128px;
               }
             }
           }
@@ -505,7 +516,7 @@ body {
       padding: 20px;
       font-size: 30px;
       .card {
-        width: 75%;
+        width: 400px;
         margin: auto;
         .card-img-top {
           width: 400px;
@@ -524,6 +535,7 @@ body {
         }
         .buy-container {
           display: flex;
+          justify-content: center;
           .buy-course {
             padding: 20px;
             border: none;
@@ -565,17 +577,17 @@ body {
                 }
               }
             }
-            @keyframes xAxis {
-              100% {
-                transform: translateX(calc(50vw - 105px));
-              }
-            }
+            // @keyframes xAxis {
+            //   100% {
+            //     transform: translateX(calc(50vw - 105px));
+            //   }
+            // }
 
-            @keyframes yAxis {
-              100% {
-                transform: translateY(calc(-50vh + 75px));
-              }
-            }
+            // @keyframes yAxis {
+            //   100% {
+            //     transform: translateY(calc(-50vh + 75px));
+            //   }
+            // }
           }
         }
       }
