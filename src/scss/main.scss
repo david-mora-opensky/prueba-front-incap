@@ -525,20 +525,16 @@ body {
         .buy-container {
           display: flex;
           .buy-course {
-            // background-color: #004765;
-            // padding: 5px 15px;
-            // color: #fff;
-            // font-size: 1.2rem;
-            // border-radius: 10px;
-            // text-decoration: none;
             padding: 20px;
             border: none;
-            background: lighten(#292d48, 65);
+            background: #004765;
             position: relative;
             outline: none;
-            border-radius: 5px;
-            color: #292d48;
+            border-radius: 15px;
+            color: white;
             font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
             .cart-item {
               position: absolute;
               height: 24px;

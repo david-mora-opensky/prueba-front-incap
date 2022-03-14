@@ -40,11 +40,8 @@ const uploadPhotoProfile = () => {
       const divInfoUser = document.querySelector(".user-info");
       const urlToSet = currentImage.getAttribute("src");
       const name = document.querySelector("#name").value;
-      console.log(`name`, name);
       const lastName = document.querySelector("#lastName").value;
-      console.log(`name`, lastName);
       const email = document.querySelector("#email").value;
-      console.log(`name`, email);
       divInfoUser.innerHTML = `<img class="photo-profile-procesed" src ="${urlToSet}"/>
       <div class="hide-content">
         <p class="name-user">${name} ${lastName}</p>
@@ -67,7 +64,6 @@ const animationBuy = () => {
   try {
     document.querySelectorAll(".buy-course").forEach((x) =>
       x.addEventListener("click", () => {
-        console.log(`888`, 888);
         const button = document.querySelector(".buy-course");
         const cart = document.querySelector(".cart");
         const cartTotal = cart.getAttribute("data-totalitems");
@@ -98,11 +94,8 @@ const addListBuy = (itemBuy) => {
     cart.addEventListener("click", () => {
       const loginHeader = document.querySelector("#loginHeader");
       if (loginHeader) {
-        console.log(`888`, 888);
         loginHeader.click();
       } else {
-        console.log(`444`, 444);
-
         const validateItems = cart.getAttribute("data-totalitems");
         if (validateItems > 0) {
           const containModal = `
@@ -141,14 +134,11 @@ const addListBuy = (itemBuy) => {
 // addListBuy();
 
 const confirm = (itemBuy) => {
-  console.log(`845`, 845);
-  console.log(`itemBuy`, itemBuy);
   let suma = 0;
 
   const buyModal = document.querySelector(".contain-modal2");
   for (let i = 0; i < itemBuy.length; i++) {
     suma += parseInt(itemBuy[i].price);
-    console.log(`suma`, suma);
   }
   if (itemBuy[0].schedule) {
     const busqueda = itemBuy.reduce((acc, curso) => {
@@ -160,24 +150,6 @@ const confirm = (itemBuy) => {
       return busqueda[curso.schedule];
     });
 
-    console.log(`duplicados`, duplicados);
-
-    // const divSuccess = document.createElement("div");
-    // divSuccess.innerHTML = `
-    // <div>
-    //   <p>La suma de los cursos es: $${suma}
-    //   <p>No hay cruce de horarios</p>
-    //   <a id="pay">Paga aquí</a>
-    // </div>
-    // `;
-    // const divFail = document.createElement("div");
-    // divFail.innerHTML = `
-    // <div>
-    //  Se presenta cruce de horarios
-    // </div>
-    // `;
-
-    // const neww = validateHorarios.indexOf();
     if (duplicados.length > 0) {
       buyModal.innerHTML = `  
     <div class="fail">
@@ -185,9 +157,7 @@ const confirm = (itemBuy) => {
       <p>Se presenta cruce de horarios</p>
      </div>
     `;
-      console.log("Hay cruce de horarios");
     } else {
-      console.log("perfecto");
       buyModal.innerHTML = `
     <div class="check">
       <img src="../images/icons/check.png"/>
@@ -211,13 +181,6 @@ const confirm = (itemBuy) => {
   </div>
     `;
   }
-  // const sum = itemBuy.forEach((element) => {
-  //   console.log(`itemBuy.price`, element.price);
-  //   let convert = parseInt(element.price);
-  //   console.log(`convert`, convert);
-  //   suma = convert++;
-  //   console.log(`suma`, suma);
-  // });
 };
 
 const closeModal = () => {
@@ -232,15 +195,9 @@ const closeModal = () => {
 closeModal();
 const extractInfoBuy = (e) => {
   try {
-    const buyCourse = document.querySelectorAll(".buy-course");
-    const arrayItems = [];
     const itemBuy = {};
-    const itemBuyArray = [];
 
-    // buyCourse.forEach((element) => {
-    //   element.addEventListener("click", (e) => {
     const card = e.path[2];
-    console.log(`card`, card);
     const title = card.querySelector(".card-title").innerText;
     const price =
       card.querySelector(".list-group-flush").childNodes[5].innerText;
@@ -252,7 +209,6 @@ const extractInfoBuy = (e) => {
 
     let src = card.querySelector("img");
     src = src.getAttribute("src");
-    console.log(`src`, src);
     itemBuy.title = title;
     itemBuy.price = price;
 
@@ -274,7 +230,6 @@ const testFun = () => {
       element.addEventListener("click", (e) => {
         const test = extractInfoBuy(e);
         itemBuyArray.push(test);
-        console.log(`itemBuyArray`, itemBuyArray);
         addListBuy(itemBuyArray);
         confirm(itemBuyArray);
       });
@@ -282,18 +237,3 @@ const testFun = () => {
   } catch (error) {}
 };
 testFun();
-
-// const openModalBuy = () => {
-//   try {
-//     const referenteToInsert = document.querySelector(".list-items");
-//     console.log(`referenteToInsert`, referenteToInsert);
-//     console.log(`555`, 555);
-//     const div = document.createElement("div");
-//     const containModal = ``;
-//     div.innerHTML = containModal;
-
-//     referenteToInsert.appendChild(div);
-//   } catch (error) {
-//     console.log(`error`, error);
-//   }
-// };
