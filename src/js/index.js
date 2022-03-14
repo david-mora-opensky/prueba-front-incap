@@ -161,6 +161,7 @@ const confirm = (itemBuy) => {
     <div class="fail">
       <img src="../images/icons/fail.png"/>
       <p>Se presenta cruce de horarios</p>
+      <h4>Por favor escoge los cursos con diferente horario</h4>
      </div>
     `;
     } else {
