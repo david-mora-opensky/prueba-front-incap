@@ -143,11 +143,16 @@ body {
           width: 15%;
           padding: 10px;
           position: absolute;
-          right: 10%;
+          right: 15%;
           border-radius: 10px;
           top: 87%;
           text-align: center;
           z-index: 9999;
+          border: 1px solid #004765;
+          @media only screen and (min-width: 1200px) and (max-width: 1500px) {
+            width: 25%;
+            right: 5%;
+          }
           .name-user {
             font-size: 1rem;
 
@@ -206,6 +211,24 @@ body {
           text-align: center;
           border-radius: 24px;
         }
+        .cart-an {
+          animation: shakeCart 0.4s ease-in-out forwards;
+        }
+        @keyframes shakeCart {
+          25% {
+            transform: translateX(6px);
+          }
+          50% {
+            transform: translateX(-4px);
+          }
+          75% {
+            transform: translateX(2px);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
         #buy {
           width: 50px;
           cursor: pointer;

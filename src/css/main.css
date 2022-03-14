@@ -149,11 +149,18 @@ body {
   width: 15%;
   padding: 10px;
   position: absolute;
-  right: 10%;
+  right: 15%;
   border-radius: 10px;
   top: 87%;
   text-align: center;
   z-index: 9999;
+  border: 1px solid #004765;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .header .custom-nav #navbarNav .user-info .hide-content {
+    width: 25%;
+    right: 5%;
+  }
 }
 .header .custom-nav #navbarNav .user-info .hide-content .name-user {
   font-size: 1rem;
@@ -205,6 +212,23 @@ body {
   color: white;
   text-align: center;
   border-radius: 24px;
+}
+.header .custom-nav #navbarNav .cart .cart-an {
+  animation: shakeCart 0.4s ease-in-out forwards;
+}
+@keyframes shakeCart {
+  25% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .header .custom-nav #navbarNav .cart #buy {
   width: 50px;

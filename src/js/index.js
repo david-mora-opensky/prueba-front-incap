@@ -68,6 +68,7 @@ const animationBuy = () => {
         const cart = document.querySelector(".cart");
         const cartTotal = cart.getAttribute("data-totalitems");
         const newCartTotal = parseInt(cartTotal) + 1;
+        const cartImg = document.querySelector("#buy");
 
         button.classList.add("sendtocart");
         setTimeout(function () {
@@ -78,6 +79,12 @@ const animationBuy = () => {
             cart.classList.remove("shake");
           }, 500);
         }, 1000);
+        setTimeout(function () {
+          cartImg.classList.add("cart-an");
+          setTimeout(function () {
+            cartImg.classList.remove("cart-an");
+          }, 200);
+        }, 500);
       })
     );
   } catch (error) {
@@ -135,7 +142,6 @@ const addListBuy = (itemBuy) => {
 
 const confirm = (itemBuy) => {
   let suma = 0;
-  console.log(`666`, 666);
   const buyModal = document.querySelector(".contain-modal2");
   for (let i = 0; i < itemBuy.length; i++) {
     suma += parseInt(itemBuy[i].price);
