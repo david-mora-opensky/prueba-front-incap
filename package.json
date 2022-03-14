@@ -1,0 +1,21 @@
+{
+  "name": "proyecto-incap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "sass --watch src/scss/main.scss src/css/main.css",
+    "build:scss": "sass --watch src/scss/main.scss src/css/main.css",
+    "compile": "html-includes --src src --dest dist",
+    "compile:min": "html-includes --src src --dest dist --minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "node-sass": "^7.0.1",
+    "sweetalert2": "^11.4.4",
+    "swiper": "^8.0.7"
+  }
+}

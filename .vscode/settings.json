@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.port": 5505,
+    "liveServer.settings.root": "/public",
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false
+  }
+  

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incap educación continua</title>
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      href="./src/images/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <script data-main="scripts/app" src="scripts/require.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <nav class="navbar navbar-expand-lg custom-nav">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html"
+            ><img
+              src="./src/images/header/educacion_continua_blanco.png"
+              alt="main-logo"
+          /></a>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://www.incap.edu.co/fpqr.html"
+                  target="_blank"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item user-info">
+                <a
+                  class="nav-link"
+                  id="loginHeader"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  >Registrate</a
+                >
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          Registrate
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body custom-modal-body">
+                        <div class="col-md-12">
+                          <div class="file-select" id="src-file1">
+                            <input
+                              type="file"
+                              name="src-file1"
+                              id="uploadFile"
+                            />
+                          </div>
+                          <div class="container-photo">
+                            <img
+                              class="photoProfile"
+                              src="./src/images/header/default-profile.svg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <label for="validationCustom01" class="form-label"
+                            >Nombre</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            value=""
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-12">
+                          <label for="validationCustom02" class="form-label"
+                            >Apellido</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="lastName"
+                            value=""
+                            required
+                          />
+                          <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-12">
+                          <label
+                            for="validationCustomUsername"
+                            class="form-label"
+                            >Correo electrónico</label
+                          >
+                          <div class="input-group has-validation">
+                            <span
+                              class="input-group-text"
+                              id="inputGroupPrepend"
+                              >@</span
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="email"
+                              aria-describedby="inputGroupPrepend"
+                              required
+                            />
+                            <div class="invalid-feedback">
+                              Please choose a username.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer text-center">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Cancelar
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          data-bs-dismiss="modal"
+                          id="login"
+                        >
+                          Enviar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" id="f-1">
+          <div class="item-slider">
+            <h1>SE ACABA EL TIEMPO</h1>
+            <h2>NO DUDES EN SEGUIR ESTUDIANDO</h2>
+            <a class="btn-custom" href="#">CONOCE NUESTROS CURSOS</a>
+          </div>
+        </div>
+        <div class="swiper-slide" id="f-2">
+          <div class="item-slider">
+            <h1>SE EL HEROE DE TU VIDA</h1>
+            <h2>CONTINUA CON TUS SUEÑOS</h2>
+            <a class="btn-custom" href="#">CONOCE NUESTROS CURSOS</a>
+          </div>
+        </div>
+        <div class="swiper-slide" id="f-3">
+          <div class="item-slider">
+            <h1>CONOCE LA ESCUELA DE EDUCACIÓN INTEGRAL</h1>
+            <h2>MIRA TODOS LOS CURSOS QUE TENEMOS</h2>
+            <a class="btn-custom" href="#">CONOCE NUESTROS CURSOS</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="main-container">
+      <div class="description" id="main">
+        <div class="text-container">
+          <h1>¿Qué es Educación Continua?</h1>
+          <h5>
+            Es el tipo de formación que te permite profundizar o desarrollar
+            nuevos conocimientos en tu disciplina o bien; para actualizar y/o
+            extender tus habilidades hacia áreas complementarias.
+          </h5>
+        </div>
+      </div>
+      <div class="main-container-cards mt-4">
+        <h2 class="text-center">Elige como quieres estudiar...</h2>
+        <div class="container-cards">
+          <div class="card" id="sync-card" style="width: 100%">
+            <a href="./src/html/sincronico.html">
+              <img
+                src="./src/images/sincronico.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h3 class="card-text text-center">Metodología Sincrónica</h3>
+                <p>
+                  Las sesiones de clase son con horarios especificos por una
+                  plataforma de video, en tiempo real con tus compañeros
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="card" id="async-card" style="width: 100%">
+            <a href="./src/html/asincronico.html">
+              <img
+                src="./src/images/asincronico.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h3 class="card-text text-center">Metodología Asincrónica</h3>
+                <p>
+                  Cuentas con recursos academicos disponibles 24/7 en la nube y
+                  manejas el tiempo a tu gusto, sin horarios especificos
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-questions mt-4">
+        <h1 class="text-center">Preguntas frecuentes</h1>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                ¿Por qué estudiar en el INCAP?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Somos la institución de educación técnica para el trabajo más
+                grande del país, con presencia en las principales ciudades de
+                Colombia, con más de 30 años de experiencia en el mercado y
+                recibiendo premios y reconocimientos por nuestra calidad
+                educativa y humana
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                ¿Que beneficios tengo al estudiar en el INCAP?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Al ser un egresado de cualquier programa de nuestra institución
+                cuentas con varios beneficios entre ellos esta obtener
+                descuentos en más programas para que nunca pares de aprender,
+                así como poder utilizar los servicios de EBI nuestro instituto
+                de bienestar sin ninguna restricción
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                No se que estudiar
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                ¡Dejanos ayudarte! un equipo especilizado se contactará contigo
+                para asesorarte, dejanos tus datos y no dudes en invertir en tu
+                futuro
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <footer class="row row-cols-5 py-5 my-5 border-top">
+          <div class="col">
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 link-dark text-decoration-none"
+            >
+              <img
+                src="./src/images/footer/logo_educacion_continua_azul.png"
+                alt=""
+              />
+            </a>
+            <p class="text-muted">COPYRIGHT © 2022</p>
+          </div>
+
+          <div class="col"></div>
+
+          <div class="col">
+            <h5>Productos</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Diplomados</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Expertos</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Seminarios</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Cursos Cortos</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Talleres</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Webinars</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h5>Destacados</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Nosotros</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted"
+                  >Servicio al Cliente</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted">Campus Virtual</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-muted"
+                  >Preguntas frecuentes</a
+                >
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
